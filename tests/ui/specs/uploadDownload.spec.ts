@@ -51,7 +51,6 @@ test.describe('Upload and Download', () => {
         ]);
 
         const isMultiple = uploadFiles.isMultiple()
-        console.log(isMultiple);
         uploadFiles.setFiles(
             [filename1, filename2]
         );
