@@ -1,7 +1,7 @@
 {
   "config": {
-    "configFile": "c:\\Users\\Jake\\Documents\\QA\\playwright_projects\\pw-lambda-demo\\playwright.config.ts",
-    "rootDir": "c:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/tests",
+    "configFile": "C:\\Users\\Jake\\Documents\\QA\\playwright_projects\\pw-lambda-demo\\playwright.config.ts",
+    "rootDir": "C:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/tests",
     "forbidOnly": false,
     "fullyParallel": true,
     "globalSetup": null,
@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 1
+      "actualWorkers": 3
     },
     "preserveOutput": "always",
     "reporter": [
@@ -37,12 +37,12 @@
     "quiet": false,
     "projects": [
       {
-        "outputDir": "c:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/test-results",
+        "outputDir": "C:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/test-results",
         "repeatEach": 1,
         "retries": 0,
         "id": "chromium",
         "name": "chromium",
-        "testDir": "c:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/tests",
+        "testDir": "C:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/tests",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
@@ -50,12 +50,12 @@
         "timeout": 30000
       },
       {
-        "outputDir": "c:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/test-results",
+        "outputDir": "C:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/test-results",
         "repeatEach": 1,
         "retries": 0,
         "id": "firefox",
         "name": "firefox",
-        "testDir": "c:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/tests",
+        "testDir": "C:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/tests",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
@@ -63,12 +63,12 @@
         "timeout": 30000
       },
       {
-        "outputDir": "c:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/test-results",
+        "outputDir": "C:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/test-results",
         "repeatEach": 1,
         "retries": 0,
         "id": "webkit",
         "name": "webkit",
-        "testDir": "c:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/tests",
+        "testDir": "C:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/tests",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
@@ -79,63 +79,130 @@
     "shard": null,
     "updateSnapshots": "missing",
     "version": "1.39.0",
-    "workers": 1,
+    "workers": 8,
     "webServer": null
   },
   "suites": [
     {
-      "title": "ui\\pomtest\\addToCart.test.ts",
-      "file": "ui/pomtest/addToCart.test.ts",
+      "title": "ui\\fixture\\fixtest.spec.ts",
+      "file": "ui/fixture/fixtest.spec.ts",
       "column": 0,
       "line": 0,
-      "specs": [],
-      "suites": [
+      "specs": [
         {
-          "title": "POM tests",
-          "file": "ui/pomtest/addToCart.test.ts",
-          "line": 7,
-          "column": 6,
-          "specs": [
+          "title": "fixture demo",
+          "ok": true,
+          "tags": [],
+          "tests": [
             {
-              "title": "Add to cart test_03",
-              "ok": true,
-              "tags": [],
-              "tests": [
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
                 {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 27,
+                  "errors": [],
+                  "stdout": [
                     {
-                      "workerIndex": 0,
-                      "status": "passed",
-                      "duration": 8610,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2023-10-25T22:11:45.666Z",
-                      "attachments": []
+                      "text": "\u001b[33m28\u001b[39m some_email@gmail.com\n"
                     }
                   ],
-                  "status": "expected"
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-10-27T18:46:36.715Z",
+                  "attachments": []
                 }
               ],
-              "id": "5979340c2476e9184a6f-af6c20db8c8ac502cf24",
-              "file": "ui/pomtest/addToCart.test.ts",
-              "line": 35,
-              "column": 9
+              "status": "expected"
             }
-          ]
+          ],
+          "id": "a85c201d873955937974-5cf7d56432e3beb19617",
+          "file": "ui/fixture/fixtest.spec.ts",
+          "line": 3,
+          "column": 6
+        },
+        {
+          "title": "fixture demo",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "passed",
+                  "duration": 28,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "\u001b[33m28\u001b[39m some_email@gmail.com\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-10-27T18:46:36.716Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a85c201d873955937974-cf0b75b40a93dc67dfd3",
+          "file": "ui/fixture/fixtest.spec.ts",
+          "line": 3,
+          "column": 6
+        },
+        {
+          "title": "fixture demo",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "status": "passed",
+                  "duration": 29,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "\u001b[33m28\u001b[39m some_email@gmail.com\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-10-27T18:46:36.712Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a85c201d873955937974-dd9c54e1929ad8c1d5ad",
+          "file": "ui/fixture/fixtest.spec.ts",
+          "line": 3,
+          "column": 6
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2023-10-25T22:11:45.222Z",
-    "duration": 9421.851999999999
+    "startTime": "2023-10-27T18:46:36.073Z",
+    "duration": 686.323
   }
 }
