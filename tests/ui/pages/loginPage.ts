@@ -16,8 +16,8 @@ export default class LoginPage{
     }
 
     async login(email: string, password: string) {
-        await this.enterEmail(`${process.env.EMAIL}`)
-        await this.enterLoginPassword(`${process.env.PASS}`)
+        await this.enterEmail(email)
+        await this.enterLoginPassword(password)
         await this.clickLoginBtn();
     }
     

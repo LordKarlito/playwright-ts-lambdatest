@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 1
+      "actualWorkers": 8
     },
     "preserveOutput": "always",
     "reporter": [
@@ -79,10 +79,191 @@
     "shard": null,
     "updateSnapshots": "missing",
     "version": "1.39.0",
-    "workers": 1,
+    "workers": 8,
     "webServer": null
   },
   "suites": [
+    {
+      "title": "ui\\fixture\\fixtest.spec.ts",
+      "file": "ui/fixture/fixtest.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "fixture demo",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 42,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "\u001b[33m28\u001b[39m some_email@gmail.com\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-10-27T20:58:41.746Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a85c201d873955937974-5cf7d56432e3beb19617",
+          "file": "ui/fixture/fixtest.spec.ts",
+          "line": 3,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "ui\\pomtest\\addToCart.test.ts",
+      "file": "ui/pomtest/addToCart.test.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "POM tests",
+          "file": "ui/pomtest/addToCart.test.ts",
+          "line": 7,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Register test_01",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "status": "passed",
+                      "duration": 4246,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-10-27T20:58:41.755Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5979340c2476e9184a6f-99e9a25099560081e078",
+              "file": "ui/pomtest/addToCart.test.ts",
+              "line": 8,
+              "column": 9
+            },
+            {
+              "title": "Login test_02",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "status": "passed",
+                      "duration": 3846,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-10-27T20:58:41.765Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5979340c2476e9184a6f-b339dee31c5ca92c6f9f",
+              "file": "ui/pomtest/addToCart.test.ts",
+              "line": 24,
+              "column": 9
+            },
+            {
+              "title": "Add to cart test_03",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "status": "failed",
+                      "duration": 7852,
+                      "error": {
+                        "message": "\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('#notification-box-top')\nExpected: visible\nReceived: hidden\nCall log:\n  \u001b[2m- expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#notification-box-top')\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('#notification-box-top')\nExpected: visible\nReceived: hidden\nCall log:\n  \u001b[2m- expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#notification-box-top')\u001b[22m\n\n    at c:\\Users\\Jake\\Documents\\QA\\playwright_projects\\pw-lambda-demo\\tests\\ui\\pomtest\\addToCart.test.ts:48:32",
+                        "location": {
+                          "file": "c:\\Users\\Jake\\Documents\\QA\\playwright_projects\\pw-lambda-demo\\tests\\ui\\pomtest\\addToCart.test.ts",
+                          "column": 32,
+                          "line": 48
+                        },
+                        "snippet": "  46 |\n  47 |         const isToastVisible = await productPage.isToastVisible();\n> 48 |         expect(isToastVisible).toBeVisible();\n     |                                ^\n  49 |         \n  50 |     });\n  51 | })"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "c:\\Users\\Jake\\Documents\\QA\\playwright_projects\\pw-lambda-demo\\tests\\ui\\pomtest\\addToCart.test.ts",
+                            "column": 32,
+                            "line": 48
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('#notification-box-top')\nExpected: visible\nReceived: hidden\nCall log:\n  \u001b[2m- expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#notification-box-top')\u001b[22m\n\n\n  46 |\n  47 |         const isToastVisible = await productPage.isToastVisible();\n> 48 |         expect(isToastVisible).toBeVisible();\n     |                                ^\n  49 |         \n  50 |     });\n  51 | })\n\n\u001b[2m    at c:\\Users\\Jake\\Documents\\QA\\playwright_projects\\pw-lambda-demo\\tests\\ui\\pomtest\\addToCart.test.ts:48:32\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-10-27T20:58:41.768Z",
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "c:\\Users\\Jake\\Documents\\QA\\playwright_projects\\pw-lambda-demo\\tests\\ui\\pomtest\\addToCart.test.ts",
+                        "column": 32,
+                        "line": 48
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "5979340c2476e9184a6f-af6c20db8c8ac502cf24",
+              "file": "ui/pomtest/addToCart.test.ts",
+              "line": 35,
+              "column": 9
+            }
+          ]
+        }
+      ]
+    },
     {
       "title": "ui\\pomtest\\addToCartUsingFixtures.test.ts",
       "file": "ui/pomtest/addToCartUsingFixtures.test.ts",
@@ -109,14 +290,14 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
+                      "workerIndex": 4,
                       "status": "passed",
-                      "duration": 3949,
+                      "duration": 4231,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2023-10-27T19:12:31.078Z",
+                      "startTime": "2023-10-27T20:58:41.755Z",
                       "attachments": []
                     }
                   ],
@@ -141,14 +322,14 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
+                      "workerIndex": 5,
                       "status": "passed",
-                      "duration": 2612,
+                      "duration": 3652,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2023-10-27T19:12:35.424Z",
+                      "startTime": "2023-10-27T20:58:41.787Z",
                       "attachments": []
                     }
                   ],
@@ -162,6 +343,111 @@
             },
             {
               "title": "Add to cart test_03",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "status": "failed",
+                      "duration": 7646,
+                      "error": {
+                        "message": "\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('#notification-box-top')\nExpected: visible\nReceived: hidden\nCall log:\n  \u001b[2m- expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#notification-box-top')\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('#notification-box-top')\nExpected: visible\nReceived: hidden\nCall log:\n  \u001b[2m- expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#notification-box-top')\u001b[22m\n\n    at c:\\Users\\Jake\\Documents\\QA\\playwright_projects\\pw-lambda-demo\\tests\\ui\\pomtest\\addToCartUsingFixtures.test.ts:45:32",
+                        "location": {
+                          "file": "c:\\Users\\Jake\\Documents\\QA\\playwright_projects\\pw-lambda-demo\\tests\\ui\\pomtest\\addToCartUsingFixtures.test.ts",
+                          "column": 32,
+                          "line": 45
+                        },
+                        "snippet": "  43 |\n  44 |         const isToastVisible = await productPage.isToastVisible();\n> 45 |         expect(isToastVisible).toBeVisible();\n     |                                ^\n  46 |         \n  47 |     });\n  48 | })"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "c:\\Users\\Jake\\Documents\\QA\\playwright_projects\\pw-lambda-demo\\tests\\ui\\pomtest\\addToCartUsingFixtures.test.ts",
+                            "column": 32,
+                            "line": 45
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('#notification-box-top')\nExpected: visible\nReceived: hidden\nCall log:\n  \u001b[2m- expect.toBeVisible with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#notification-box-top')\u001b[22m\n\n\n  43 |\n  44 |         const isToastVisible = await productPage.isToastVisible();\n> 45 |         expect(isToastVisible).toBeVisible();\n     |                                ^\n  46 |         \n  47 |     });\n  48 | })\n\n\u001b[2m    at c:\\Users\\Jake\\Documents\\QA\\playwright_projects\\pw-lambda-demo\\tests\\ui\\pomtest\\addToCartUsingFixtures.test.ts:45:32\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-10-27T20:58:41.797Z",
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "c:\\Users\\Jake\\Documents\\QA\\playwright_projects\\pw-lambda-demo\\tests\\ui\\pomtest\\addToCartUsingFixtures.test.ts",
+                        "column": 32,
+                        "line": 45
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "fdeb00f148b066dfe01e-0d4d5a5b745b47f1d200",
+              "file": "ui/pomtest/addToCartUsingFixtures.test.ts",
+              "line": 32,
+              "column": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "ui\\specs\\alerts.spec.ts",
+      "file": "ui/specs/alerts.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Handling dialogs",
+          "file": "ui/specs/alerts.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "alerts",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "status": "passed",
+                      "duration": 701,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-10-27T20:58:41.779Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "796c963f14b044d417cb-5d1211861add108074dd",
+              "file": "ui/specs/alerts.spec.ts",
+              "line": 8,
+              "column": 7
+            },
+            {
+              "title": "confirm - accept",
               "ok": true,
               "tags": [],
               "tests": [
@@ -175,21 +461,681 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 7099,
+                      "duration": 800,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2023-10-27T19:12:38.038Z",
+                      "startTime": "2023-10-27T20:58:41.807Z",
                       "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "fdeb00f148b066dfe01e-0d4d5a5b745b47f1d200",
-              "file": "ui/pomtest/addToCartUsingFixtures.test.ts",
-              "line": 32,
+              "id": "796c963f14b044d417cb-bbdfb5e6e7470f47baf1",
+              "file": "ui/specs/alerts.spec.ts",
+              "line": 23,
+              "column": 7
+            },
+            {
+              "title": "confirm - dismiss",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 521,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-10-27T20:58:43.477Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "796c963f14b044d417cb-3e1d014d60d31d8566c2",
+              "file": "ui/specs/alerts.spec.ts",
+              "line": 40,
+              "column": 7
+            },
+            {
+              "title": "prompt - OK: with name",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "status": "passed",
+                      "duration": 495,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-10-27T20:58:43.537Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "796c963f14b044d417cb-f1d93d54e59433d139b0",
+              "file": "ui/specs/alerts.spec.ts",
+              "line": 59,
+              "column": 7
+            },
+            {
+              "title": "prompt - CANCEL",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 506,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-10-27T20:58:44.001Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "796c963f14b044d417cb-3070e5563d5d3451ad09",
+              "file": "ui/specs/alerts.spec.ts",
+              "line": 75,
+              "column": 7
+            },
+            {
+              "title": "prompt - OK: enter nothing",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "status": "passed",
+                      "duration": 496,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-10-27T20:58:44.035Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "796c963f14b044d417cb-08944814a5c3b8d82ac7",
+              "file": "ui/specs/alerts.spec.ts",
+              "line": 88,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "Bootstrap Modals",
+          "file": "ui/specs/alerts.spec.ts",
+          "line": 103,
+          "column": 6,
+          "specs": [
+            {
+              "title": "single modal",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 2545,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-10-27T20:58:44.510Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "796c963f14b044d417cb-8350e92da13b16cac1c6",
+              "file": "ui/specs/alerts.spec.ts",
+              "line": 108,
+              "column": 7
+            },
+            {
+              "title": "multiple modal",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "status": "passed",
+                      "duration": 2357,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-10-27T20:58:44.534Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "796c963f14b044d417cb-5ef528c7a5593a9be78a",
+              "file": "ui/specs/alerts.spec.ts",
+              "line": 123,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "ui\\specs\\basicInteractions.spec.ts",
+      "file": "ui/specs/basicInteractions.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Playground Form Testing",
+          "file": "ui/specs/basicInteractions.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Test form input field",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "status": "passed",
+                      "duration": 606,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-10-27T20:58:46.376Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f81c9eeee58b6d5ad396-aaf5107ed9c6bb60079a",
+              "file": "ui/specs/basicInteractions.spec.ts",
+              "line": 4,
+              "column": 7
+            },
+            {
+              "title": "Checkbox",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "status": "passed",
+                      "duration": 918,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-10-27T20:58:46.570Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f81c9eeee58b6d5ad396-bbca055dcb3766c930f7",
+              "file": "ui/specs/basicInteractions.spec.ts",
+              "line": 25,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "ui\\specs\\dropdown.spec.ts",
+      "file": "ui/specs/dropdown.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "dropdowns",
+          "file": "ui/specs/dropdown.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "select dropdown",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "status": "passed",
+                      "duration": 627,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-10-27T20:58:46.810Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "549701e1e80102ec060d-a70d8e391b3c73bd9441",
+              "file": "ui/specs/dropdown.spec.ts",
+              "line": 9,
+              "column": 9
+            },
+            {
+              "title": "multi select",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "status": "passed",
+                      "duration": 588,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-10-27T20:58:46.899Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "549701e1e80102ec060d-7037599e3ab60efcbc91",
+              "file": "ui/specs/dropdown.spec.ts",
+              "line": 22,
+              "column": 9
+            }
+          ]
+        },
+        {
+          "title": "jQuery select",
+          "file": "ui/specs/dropdown.spec.ts",
+          "line": 33,
+          "column": 6,
+          "specs": [
+            {
+              "title": "with search: CLICK",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "status": "passed",
+                      "duration": 794,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-10-27T20:58:46.975Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "549701e1e80102ec060d-95f80b05b3dcfb7e6590",
+              "file": "ui/specs/dropdown.spec.ts",
+              "line": 38,
+              "column": 9
+            },
+            {
+              "title": "with search: TYPE",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "status": "passed",
+                      "duration": 743,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-10-27T20:58:46.991Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "549701e1e80102ec060d-f1d68a49f1a0de8bea88",
+              "file": "ui/specs/dropdown.spec.ts",
+              "line": 45,
+              "column": 9
+            },
+            {
+              "title": "multiple values with search",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 914,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-10-27T20:58:47.064Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "549701e1e80102ec060d-80a44a739c3809998342",
+              "file": "ui/specs/dropdown.spec.ts",
+              "line": 53,
+              "column": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "ui\\specs\\frames.spec.ts",
+      "file": "ui/specs/frames.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Frame Handling",
+          "file": "ui/specs/frames.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "simple iFrame",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "status": "passed",
+                      "duration": 1822,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-10-27T20:58:47.445Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e6267419a83e05a16e26-de604847bc4bcf74bd7b",
+              "file": "ui/specs/frames.spec.ts",
+              "line": 8,
+              "column": 7
+            },
+            {
+              "title": "iframe containing webpage",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "status": "passed",
+                      "duration": 2196,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-10-27T20:58:47.494Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e6267419a83e05a16e26-3a25979bf918927ed17a",
+              "file": "ui/specs/frames.spec.ts",
+              "line": 16,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "ui\\specs\\uploadDownload.spec.ts",
+      "file": "ui/specs/uploadDownload.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Upload and Download",
+          "file": "ui/specs/uploadDownload.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "download",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "status": "passed",
+                      "duration": 1023,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-10-27T20:58:47.496Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "db3a54583eb75d8d5c6c-6aff3a074841518603d5",
+              "file": "ui/specs/uploadDownload.spec.ts",
+              "line": 6,
+              "column": 9
+            },
+            {
+              "title": "upload - single",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "status": "passed",
+                      "duration": 595,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-10-27T20:58:47.740Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "db3a54583eb75d8d5c6c-d1ec966e1d2531ca5b6d",
+              "file": "ui/specs/uploadDownload.spec.ts",
+              "line": 28,
+              "column": 9
+            },
+            {
+              "title": "upload - multiple",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "status": "passed",
+                      "duration": 876,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-10-27T20:58:47.777Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "db3a54583eb75d8d5c6c-6800e95f17c38aea6a7d",
+              "file": "ui/specs/uploadDownload.spec.ts",
+              "line": 40,
               "column": 9
             }
           ]
@@ -199,7 +1145,7 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2023-10-27T19:12:30.607Z",
-    "duration": 14554.729000000001
+    "startTime": "2023-10-27T20:58:41.116Z",
+    "duration": 9558.080000000002
   }
 }

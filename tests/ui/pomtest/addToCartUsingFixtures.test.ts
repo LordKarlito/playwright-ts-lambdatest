@@ -46,6 +46,3 @@ test.describe('POM tests', () => {
         
     });
 })
-
-
-//TODO: use external file for entering credentials (JSON???)
