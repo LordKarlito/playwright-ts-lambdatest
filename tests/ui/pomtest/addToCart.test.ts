@@ -50,5 +50,4 @@ test.describe('POM tests', () => {
     });
 })
 
-
-//TODO: use external file for entering credentials (JSON???)
+// SEE addToCartUsingFixtures.test.ts for json file implementation
