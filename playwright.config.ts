@@ -10,7 +10,7 @@ require('dotenv').config();
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
-  testDir: './tests',
+  // testDir: './tests',
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
@@ -38,22 +38,53 @@ export default defineConfig({
   projects: [
     {
       name: 'chromium',
+      testDir: './tests/ui/',
       use: { 
-        launchOptions: {
-          // slowMo: 300,
-        },
+        // launchOptions: {
+        //   slowMo: 300,
+        // },
         ...devices['Desktop Chrome'] },
     },
 
     {
       name: 'firefox',
+      testDir: './tests/ui/',
       use: { ...devices['Desktop Firefox'] },
     },
 
     {
       name: 'webkit',
+      testDir: './tests/ui/',
       use: { ...devices['Desktop Safari'] },
     },
+    {
+      name: 'API-test',
+      testDir: './tests/api/',
+      testMatch: ['apiBasics.spec.ts'],
+      use: {
+        baseURL: 'https://jsonplaceholder.typicode.com',
+      },
+    },
+    {
+      name: 'MonHunAPI',
+      testDir: './tests/api',
+      testMatch: ['monsterHunterApi.spec.ts'],
+      use: {
+        baseURL: 'https://mhw-db.com'
+      }
+    },
+    {
+      name: 'gitHubAPI',
+      testDir: './tests/api',
+      testMatch: ['githubAPI.spec.ts'],
+      use: {
+        baseURL: 'https://api.github.com',
+        extraHTTPHeaders: {
+          Accept: 'application/vnd.github.v3+json',
+          Authorization: `token ${process.env.GITSECRET}`,
+        }
+      }
+    }
 
     /* Test against mobile viewports. */
     // {

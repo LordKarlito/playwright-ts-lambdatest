@@ -1,7 +1,7 @@
 {
   "config": {
-    "configFile": "c:\\Users\\Jake\\Documents\\QA\\playwright_projects\\pw-lambda-demo\\playwright.config.ts",
-    "rootDir": "c:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/tests",
+    "configFile": "C:\\Users\\Jake\\Documents\\QA\\playwright_projects\\pw-lambda-demo\\playwright.config.ts",
+    "rootDir": "C:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo",
     "forbidOnly": false,
     "fullyParallel": true,
     "globalSetup": null,
@@ -37,12 +37,12 @@
     "quiet": false,
     "projects": [
       {
-        "outputDir": "c:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/test-results",
+        "outputDir": "C:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/test-results",
         "repeatEach": 1,
         "retries": 0,
         "id": "chromium",
         "name": "chromium",
-        "testDir": "c:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/tests",
+        "testDir": "C:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/tests/ui",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
@@ -50,12 +50,12 @@
         "timeout": 30000
       },
       {
-        "outputDir": "c:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/test-results",
+        "outputDir": "C:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/test-results",
         "repeatEach": 1,
         "retries": 0,
         "id": "firefox",
         "name": "firefox",
-        "testDir": "c:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/tests",
+        "testDir": "C:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/tests/ui",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
@@ -63,15 +63,54 @@
         "timeout": 30000
       },
       {
-        "outputDir": "c:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/test-results",
+        "outputDir": "C:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/test-results",
         "repeatEach": 1,
         "retries": 0,
         "id": "webkit",
         "name": "webkit",
-        "testDir": "c:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/tests",
+        "testDir": "C:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/tests/ui",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "C:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "id": "API-test",
+        "name": "API-test",
+        "testDir": "C:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/tests/api",
+        "testIgnore": [],
+        "testMatch": [
+          "apiBasics.spec.ts"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "C:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "id": "MonHunAPI",
+        "name": "MonHunAPI",
+        "testDir": "C:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/tests/api",
+        "testIgnore": [],
+        "testMatch": [
+          "monsterHunterApi.spec.ts"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "C:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "id": "gitHubAPI",
+        "name": "gitHubAPI",
+        "testDir": "C:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/tests/api",
+        "testIgnore": [],
+        "testMatch": [
+          "githubAPI.spec.ts"
         ],
         "timeout": 30000
       }
@@ -84,58 +123,53 @@
   },
   "suites": [
     {
-      "title": "ui\\pomtest\\addToCart.test.ts",
-      "file": "ui/pomtest/addToCart.test.ts",
+      "title": "tests\\api\\githubAPI.spec.ts",
+      "file": "tests/api/githubAPI.spec.ts",
       "column": 0,
       "line": 0,
-      "specs": [],
-      "suites": [
+      "specs": [
         {
-          "title": "POM tests",
-          "file": "ui/pomtest/addToCart.test.ts",
-          "line": 7,
-          "column": 6,
-          "specs": [
+          "title": "Create a bug report",
+          "ok": true,
+          "tags": [],
+          "tests": [
             {
-              "title": "Login test_02",
-              "ok": true,
-              "tags": [],
-              "tests": [
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "gitHubAPI",
+              "projectName": "gitHubAPI",
+              "results": [
                 {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 1083,
+                  "errors": [],
+                  "stdout": [
                     {
-                      "workerIndex": 0,
-                      "status": "passed",
-                      "duration": 3272,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2023-10-28T12:02:26.045Z",
-                      "attachments": []
+                      "text": "\u001b[33mtrue\u001b[39m\n"
                     }
                   ],
-                  "status": "expected"
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-10-28T23:13:20.165Z",
+                  "attachments": []
                 }
               ],
-              "id": "5979340c2476e9184a6f-b339dee31c5ca92c6f9f",
-              "file": "ui/pomtest/addToCart.test.ts",
-              "line": 24,
-              "column": 9
+              "status": "expected"
             }
-          ]
+          ],
+          "id": "1b50d62343acdf7d0ef4-1c14abe544f461270c63",
+          "file": "tests/api/githubAPI.spec.ts",
+          "line": 26,
+          "column": 6
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2023-10-28T12:02:25.586Z",
-    "duration": 4060.8770000000004
+    "startTime": "2023-10-28T23:13:19.599Z",
+    "duration": 3503.259
   }
 }
