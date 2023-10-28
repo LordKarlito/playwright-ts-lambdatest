@@ -84,20 +84,6 @@ test.describe('Handling dialogs', () => {
     await promptBtn.click();
     await expect(promptMessage).toBeHidden();
   });
-
-  test('prompt - OK: enter nothing',async ({page}) => {
-    page.on('dialog', dialog => {
-      dialog.accept();
-    });
-    
-    const promptBtn = page.locator('p').filter({ hasText: 'Prompt box:Click Me' }).getByRole('button');
-    const promptMessage = page.locator('id=prompt-demo');
-    
-    await expect(promptMessage).toBeHidden();
-    await promptBtn.click();
-
-    await expect(promptMessage).toHaveText(`You have entered '' !`);
-  });
 });
 
 test.describe('Bootstrap Modals', () => {

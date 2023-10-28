@@ -4,6 +4,11 @@ on:
     branches: [ main, master ]
   pull_request:
     branches: [ main, master ]
+
+env:
+  EMAIL: 'krlbrcln12+test@gmail.com'
+  PASS: 'P@ssw0rd'
+
 jobs:
   test:
     timeout-minutes: 60
