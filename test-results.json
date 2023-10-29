@@ -156,7 +156,7 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 1148,
+                  "duration": 1150,
                   "errors": [],
                   "stdout": [
                     {
@@ -165,7 +165,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-10-29T16:10:34.460Z",
+                  "startTime": "2023-10-29T16:58:24.858Z",
                   "attachments": []
                 }
               ],
@@ -176,13 +176,45 @@
           "file": "tests/api/githubAPI.spec.ts",
           "line": 34,
           "column": 5
+        },
+        {
+          "title": "should create a feature request",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "gitHubAPI",
+              "projectName": "gitHubAPI",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "passed",
+                  "duration": 1092,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2023-10-29T16:58:27.174Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1b50d62343acdf7d0ef4-692a10625207208f4835",
+          "file": "tests/api/githubAPI.spec.ts",
+          "line": 55,
+          "column": 5
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2023-10-29T16:10:34.004Z",
-    "duration": 3254.731
+    "startTime": "2023-10-29T16:58:24.422Z",
+    "duration": 4421.996
   }
 }

@@ -6,6 +6,7 @@ on:
     branches: [ main, master ]
 
 env:
+  APIKEY: $APIKEY
   GITSECRET: ${{ secrets.GITSECRET }},
   EMAIL: ${{ secrets.EMAIL }}
   PASS: ${{ secrets.PASS }}
@@ -26,7 +27,7 @@ jobs:
     # - name: Run Playwright tests
     #   run: npx playwright test
     - name: Print secret variables
-      run: echo ${{ secrets.GITSECRET }}
+      run: echo $APIKEY
     - name: Run Playwright tests (github api only)
       run: npx playwright test --project=gitHubAPI
     - uses: actions/upload-artifact@v3

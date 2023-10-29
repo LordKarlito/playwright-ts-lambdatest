@@ -93,7 +93,7 @@ export default defineConfig({
         baseURL: 'https://api.github.com',
         extraHTTPHeaders: {
           Accept: 'application/vnd.github.v3+json',
-          Authorization: `token ${process.env.GITSECRET}`,
+          Authorization: `token ${process.env.APIKEY}`,
         }
       }
     }
