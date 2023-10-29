@@ -14,7 +14,7 @@ const USER = 'LordKarlito';
 test.describe.configure({mode: 'serial'})
 
 test.beforeAll(async ({ request }) => {
-    console.log(`${process.env.GITSECRET} ${process.env.EMAIL} ${process.env.PASS}`)
+    // console.log(`${process.env.GITSECRET} ${process.env.EMAIL} ${process.env.PASS}`)
     // CREATE A NEW REPO
     const response = await request.post(`user/repos`, {
         data: {
@@ -41,7 +41,7 @@ test('Create a bug report', async ({ request }) => {
     expect(newIssue.ok()).toBeTruthy();
 
     const issues = await request.get(`/repos/${USER}/${REPO}/issues`);
-    expect(issues.ok()).toBeTruthy();
+    await expect(issues.ok()).toBeTruthy();
 
     // For arrays and objects, use expect.objectContaining({someObject}) 
     // or expect.arrayContaining({someArray})
@@ -58,7 +58,7 @@ test('should create a feature request', async ({ request }) => {
         body: 'Feature description',
     }
     });
-    expect(newIssue.ok()).toBeTruthy();
+    await expect(newIssue.ok()).toBeTruthy();
 
     const issues = await request.get(`/repos/${USER}/${REPO}/issues`);
     expect(issues.ok()).toBeTruthy();
