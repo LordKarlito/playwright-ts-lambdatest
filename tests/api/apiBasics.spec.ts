@@ -63,7 +63,7 @@ test('PATCH - update a post partially', async ({ request, baseURL }) => {
         }
     });
 
-    expect(response.ok()).toBeTruthy();
+    await expect(response.ok()).toBeTruthy();
 });
 
 // Per JSONPlaceholder: resource will not be really updated on the server but will be faked as if.
@@ -71,6 +71,6 @@ test('DELETE - delete a post', async ({ request, baseURL }) => {
     const requestURL = `${baseURL}/posts/1`;
     const response = await request.delete(requestURL);
 
-    expect(response.ok()).toBeTruthy();
+    await expect(response.ok()).toBeTruthy();
     
 })
