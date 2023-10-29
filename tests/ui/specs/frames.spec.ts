@@ -1,8 +1,8 @@
 import { test, expect } from '@playwright/test';
 
 test.describe('Frame Handling', () => {
-  test.beforeEach(async ({ page }) => {
-    await page.goto('https://www.lambdatest.com/selenium-playground/iframe-demo/')
+  test.beforeEach(async ({ page, baseURL }) => {
+    await page.goto(`${baseURL}/iframe-demo/`)
   });
   
   test('simple iFrame', async ({ page }) => {

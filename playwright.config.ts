@@ -28,7 +28,7 @@ export default defineConfig({
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
-    baseURL: 'https://ecommerce-playground.lambdatest.io/index.php',
+    // baseURL: 'https://ecommerce-playground.lambdatest.io/index.php',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
@@ -38,24 +38,39 @@ export default defineConfig({
   projects: [
     {
       name: 'chromium',
-      testDir: './tests/ui/',
+      testDir: './tests/ui/specs',
       use: { 
+      baseURL: 'https://www.lambdatest.com/selenium-playground',
         // launchOptions: {
         //   slowMo: 300,
         // },
-        ...devices['Desktop Chrome'] },
+        ...devices['Desktop Chrome'] 
+      },
     },
 
     {
       name: 'firefox',
-      testDir: './tests/ui/',
-      use: { ...devices['Desktop Firefox'] },
+      testDir: './tests/ui/specs',
+      use: { 
+        baseURL: 'https://www.lambdatest.com/selenium-playground',
+        ...devices['Desktop Firefox'] 
+      },
     },
-
     {
       name: 'webkit',
-      testDir: './tests/ui/',
-      use: { ...devices['Desktop Safari'] },
+      testDir: './tests/ui/specs',
+      use: { 
+        baseURL: 'https://www.lambdatest.com/selenium-playground/',
+        ...devices['Desktop Safari'] 
+      },
+    },
+    {
+      name: 'POM',
+      testDir: './tests/ui/pomtest',
+      use: {
+        baseURL: 'https://ecommerce-playground.lambdatest.io/index.php',
+        ...devices['Desktop Chrome'],
+      }
     },
     {
       name: 'API-test',
@@ -75,6 +90,7 @@ export default defineConfig({
     },
     {
       name: 'gitHubAPI',
+      workers: 1,
       testDir: './tests/api',
       testMatch: ['githubAPI.spec.ts'],
       use: {

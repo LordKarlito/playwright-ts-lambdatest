@@ -1,8 +1,8 @@
 import { test, expect } from '@playwright/test';
 
 test.describe('dropdowns', () => {
-    test.beforeEach(async ({ page }) => {
-        page.goto('https://www.lambdatest.com/selenium-playground/select-dropdown-demo');
+    test.beforeEach(async ({ page, baseURL }) => {
+        await page.goto(`${baseURL}/select-dropdown-demo`);
     });
     
 
@@ -31,8 +31,8 @@ test.describe('dropdowns', () => {
 });
 
 test.describe('jQuery select', () => {
-    test.beforeEach(async ({ page }) => {
-        await page.goto('https://www.lambdatest.com/selenium-playground/jquery-dropdown-search-demo');
+    test.beforeEach(async ({ page, baseURL }) => {
+        await page.goto(`${baseURL}/jquery-dropdown-search-demo`);
     })
 
     test('with search: CLICK', async ({ page }) => {
@@ -51,7 +51,8 @@ test.describe('jQuery select', () => {
     });
 
     test('multiple values with search', async ({ page }) => {
-        await page.getByRole('combobox').nth(1).click();
+        await page.getByPlaceholder('Select state(s)').click();
+        // await page.getByRole('combobox').nth(1).click();
         await page.getByRole('treeitem', { name: 'Arkansas' }).click()
         
         await page.getByRole('combobox').nth(1).click();

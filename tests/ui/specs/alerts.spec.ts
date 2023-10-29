@@ -1,8 +1,8 @@
 import { test, expect } from '@playwright/test';
 
 test.describe('Handling dialogs', () => {
-  test.beforeEach(async ({page}) => {
-    await page.goto('https://www.lambdatest.com/selenium-playground/javascript-alert-box-demo');
+  test.beforeEach(async ({page, baseURL}) => {
+    await page.goto(`${baseURL}/javascript-alert-box-demo`);
   });
 
   test('alerts', async ({ page }) => {
@@ -87,8 +87,8 @@ test.describe('Handling dialogs', () => {
 });
 
 test.describe('Bootstrap Modals', () => {
-  test.beforeEach(async ({ page }) => {
-    page.goto('https://www.lambdatest.com/selenium-playground/bootstrap-modal-demo');
+  test.beforeEach(async ({ page, baseURL }) => {
+    page.goto(`${baseURL}/bootstrap-modal-demo`);
   })
 
   test('single modal', async ({ page }) => {

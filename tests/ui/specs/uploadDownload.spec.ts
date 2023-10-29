@@ -3,8 +3,8 @@ import path from 'path';
 
 test.describe('Upload and Download', () => {
     
-    test('download', async ({ page }) => {
-        await page.goto('https://www.lambdatest.com/selenium-playground/generate-file-to-download-demo')
+    test('download', async ({ page, baseURL }) => {
+        await page.goto(`${baseURL}/generate-file-to-download-demo`)
 
         const myTextbox = page.getByRole('textbox')
         myTextbox.type('TEST DOWNLOAD!');
@@ -25,7 +25,7 @@ test.describe('Upload and Download', () => {
         // console.log(path);
     });
 
-    test('upload - single', async ({ page }) => {
+    test('upload - single', async ({ page, baseURL }) => {
         await page.goto('https://blueimp.github.io/jQuery-File-Upload/')
 
         const filename = 'testFileForUpload.png'

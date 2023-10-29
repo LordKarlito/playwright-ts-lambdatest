@@ -1,8 +1,8 @@
 import { test, expect } from '@playwright/test';
 
 test.describe("Playground Form Testing", () => {
-  test('Test form input field', async ({ page }) => {
-    await page.goto('https://www.lambdatest.com/selenium-playground/simple-form-demo');
+  test('Test form input field', async ({ page, baseURL }) => {
+    await page.goto(`${baseURL}/simple-form-demo`);
     const input1 = page.getByPlaceholder('Please enter first value');
     const input2 = page.getByPlaceholder('Please enter second value');
 
@@ -22,8 +22,8 @@ test.describe("Playground Form Testing", () => {
 
   });
 
-  test('Checkbox', async ({ page }) => {
-    await page.goto('https://www.lambdatest.com/selenium-playground/checkbox-demo');
+  test('Checkbox', async ({ page, baseURL}) => {
+    await page.goto(`${baseURL}/checkbox-demo`);
     
     const checkbox_1 = page.getByLabel('Click on check box');
     const isCheckedMessage = page.locator('id=txtAge');

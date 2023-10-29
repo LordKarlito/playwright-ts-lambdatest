@@ -11,6 +11,8 @@ import { test, expect } from '@playwright/test';
 const REPO = 'test-repo-1';
 const USER = 'LordKarlito';
 
+test.describe.configure({mode: 'serial'})
+
 test.beforeAll(async ({ request }) => {
     // CREATE A NEW REPO
     const response = await request.post(`user/repos`, {
@@ -38,7 +40,6 @@ test('Create a bug report', async ({ request }) => {
     expect(newIssue.ok()).toBeTruthy();
 
     const issues = await request.get(`/repos/${USER}/${REPO}/issues`);
-    console.log(issues.ok());
     expect(issues.ok()).toBeTruthy();
 
     // For arrays and objects, use expect.objectContaining({someObject}) 

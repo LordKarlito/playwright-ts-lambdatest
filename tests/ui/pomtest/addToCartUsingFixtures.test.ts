@@ -1,5 +1,6 @@
 import { test, expect } from "../pomfixtures/pomFixture";
 import * as data from "../../../test-data/addToCart-test-data.json"
+import { todo } from "node:test";
 
 test.describe('POM tests', () => {
     test('Register test_01', async ({ page, baseURL, registerPage }) => {
@@ -40,9 +41,7 @@ test.describe('POM tests', () => {
         await homePage.clickOnFirstProduct();
 
         await productPage.addFirstTopProductToCart();
-
-        const isToastVisible = await productPage.isToastVisible();
-        expect(isToastVisible).toBeVisible();
+        await expect(productPage.toast).toBeVisible();
         
     });
 })

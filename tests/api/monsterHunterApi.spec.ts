@@ -43,7 +43,7 @@ test('Get all monster and filter a specified monster species', async ({ request,
 
     // Get all items where species = brute wyvern
     const filteredResponse = responseBody.filter(item => item.species == 'brute wyvern');
-    console.log(filteredResponse);
+    // console.log(filteredResponse);
     let monsterNames: string[] = [];
     filteredResponse.forEach(element => {
         monsterNames.push(element['name']);

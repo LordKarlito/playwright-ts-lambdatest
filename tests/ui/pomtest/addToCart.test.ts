@@ -44,8 +44,7 @@ test.describe('POM tests', () => {
 
         await productPage.addFirstTopProductToCart();
 
-        const isToastVisible = await productPage.isToastVisible();
-        expect(isToastVisible).toBeVisible();
+        await expect(productPage.toast).toBeVisible();
         
     });
 })
