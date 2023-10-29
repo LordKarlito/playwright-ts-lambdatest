@@ -6,8 +6,9 @@ on:
     branches: [ main, master ]
 
 env:
-  EMAIL: 'krlbrcln12+test@gmail.com'
-  PASS: 'P@ssw0rd'
+  GITSECRET: ${{ secrets.GITSECRET}},
+  EMAIL: ${{ secrets.EMAIL}}
+  PASS: ${{ secrets.PASS}}
 
 jobs:
   test:
