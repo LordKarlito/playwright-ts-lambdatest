@@ -21,6 +21,7 @@ test.beforeAll(async ({ request }) => {
             name: REPO,
         }
     });
+    console.log(response.status());
     await expect(response.ok()).toBeTruthy();
 });
 

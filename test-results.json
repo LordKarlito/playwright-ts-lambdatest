@@ -156,12 +156,16 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 1159,
+                  "duration": 1148,
                   "errors": [],
-                  "stdout": [],
+                  "stdout": [
+                    {
+                      "text": "\u001b[33m201\u001b[39m\n"
+                    }
+                  ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-10-29T15:59:52.322Z",
+                  "startTime": "2023-10-29T16:10:34.460Z",
                   "attachments": []
                 }
               ],
@@ -170,7 +174,7 @@
           ],
           "id": "1b50d62343acdf7d0ef4-1c14abe544f461270c63",
           "file": "tests/api/githubAPI.spec.ts",
-          "line": 33,
+          "line": 34,
           "column": 5
         }
       ]
@@ -178,7 +182,7 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2023-10-29T15:59:51.880Z",
-    "duration": 3461.842
+    "startTime": "2023-10-29T16:10:34.004Z",
+    "duration": 3254.731
   }
 }
