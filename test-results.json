@@ -1,7 +1,7 @@
 {
   "config": {
-    "configFile": "C:\\Users\\Jake\\Documents\\QA\\playwright_projects\\pw-lambda-demo\\playwright.config.ts",
-    "rootDir": "C:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo",
+    "configFile": "c:\\Users\\Jake\\Documents\\QA\\playwright_projects\\pw-lambda-demo\\playwright.config.ts",
+    "rootDir": "c:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo",
     "forbidOnly": false,
     "fullyParallel": true,
     "globalSetup": null,
@@ -37,12 +37,12 @@
     "quiet": false,
     "projects": [
       {
-        "outputDir": "C:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/test-results",
+        "outputDir": "c:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/test-results",
         "repeatEach": 1,
         "retries": 0,
         "id": "chromium",
         "name": "chromium",
-        "testDir": "C:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/tests/ui/specs",
+        "testDir": "c:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/tests/ui/specs",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
@@ -50,12 +50,12 @@
         "timeout": 30000
       },
       {
-        "outputDir": "C:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/test-results",
+        "outputDir": "c:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/test-results",
         "repeatEach": 1,
         "retries": 0,
         "id": "firefox",
         "name": "firefox",
-        "testDir": "C:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/tests/ui/specs",
+        "testDir": "c:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/tests/ui/specs",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
@@ -63,12 +63,12 @@
         "timeout": 30000
       },
       {
-        "outputDir": "C:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/test-results",
+        "outputDir": "c:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/test-results",
         "repeatEach": 1,
         "retries": 0,
         "id": "webkit",
         "name": "webkit",
-        "testDir": "C:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/tests/ui/specs",
+        "testDir": "c:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/tests/ui/specs",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
@@ -76,12 +76,12 @@
         "timeout": 30000
       },
       {
-        "outputDir": "C:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/test-results",
+        "outputDir": "c:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/test-results",
         "repeatEach": 1,
         "retries": 0,
         "id": "POM",
         "name": "POM",
-        "testDir": "C:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/tests/ui/pomtest",
+        "testDir": "c:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/tests/ui/pomtest",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
@@ -89,12 +89,12 @@
         "timeout": 30000
       },
       {
-        "outputDir": "C:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/test-results",
+        "outputDir": "c:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/test-results",
         "repeatEach": 1,
         "retries": 0,
         "id": "API-test",
         "name": "API-test",
-        "testDir": "C:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/tests/api",
+        "testDir": "c:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/tests/api",
         "testIgnore": [],
         "testMatch": [
           "apiBasics.spec.ts"
@@ -102,12 +102,12 @@
         "timeout": 30000
       },
       {
-        "outputDir": "C:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/test-results",
+        "outputDir": "c:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/test-results",
         "repeatEach": 1,
         "retries": 0,
         "id": "MonHunAPI",
         "name": "MonHunAPI",
-        "testDir": "C:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/tests/api",
+        "testDir": "c:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/tests/api",
         "testIgnore": [],
         "testMatch": [
           "monsterHunterApi.spec.ts"
@@ -115,12 +115,12 @@
         "timeout": 30000
       },
       {
-        "outputDir": "C:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/test-results",
+        "outputDir": "c:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/test-results",
         "repeatEach": 1,
         "retries": 0,
         "id": "gitHubAPI",
         "name": "gitHubAPI",
-        "testDir": "C:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/tests/api",
+        "testDir": "c:/Users/Jake/Documents/QA/playwright_projects/pw-lambda-demo/tests/api",
         "testIgnore": [],
         "testMatch": [
           "githubAPI.spec.ts"
@@ -156,12 +156,12 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 1157,
+                  "duration": 1095,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-10-29T01:46:04.570Z",
+                  "startTime": "2023-10-29T15:32:19.704Z",
                   "attachments": []
                 }
               ],
@@ -188,12 +188,12 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 1093,
+                  "duration": 1138,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-10-29T01:46:06.830Z",
+                  "startTime": "2023-10-29T15:32:21.989Z",
                   "attachments": []
                 }
               ],
@@ -210,7 +210,7 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2023-10-29T01:46:04.024Z",
-    "duration": 4477.285
+    "startTime": "2023-10-29T15:32:19.233Z",
+    "duration": 4472.7339999999995
   }
 }

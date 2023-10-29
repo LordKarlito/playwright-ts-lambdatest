@@ -14,6 +14,7 @@ const USER = 'LordKarlito';
 test.describe.configure({mode: 'serial'})
 
 test.beforeAll(async ({ request }) => {
+    console.log(`${process.env.GITSECRET} ${process.env.EMAIL} ${process.env.PASS}`)
     // CREATE A NEW REPO
     const response = await request.post(`user/repos`, {
         data: {

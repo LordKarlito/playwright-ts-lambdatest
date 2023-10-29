@@ -6,9 +6,9 @@ on:
     branches: [ main, master ]
 
 env:
-  GITSECRET: ${{ secrets.GITSECRET}},
-  EMAIL: ${{ secrets.EMAIL}}
-  PASS: ${{ secrets.PASS}}
+  GITSECRET: ${{ secrets.GITSECRET }},
+  EMAIL: ${{ secrets.EMAIL }}
+  PASS: ${{ secrets.PASS }}
 
 jobs:
   test:
