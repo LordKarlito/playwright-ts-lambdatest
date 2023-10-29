@@ -21,13 +21,13 @@ test.beforeAll(async ({ request }) => {
             name: REPO,
         }
     });
-    expect(response.ok()).toBeTruthy();
+    await expect(response.ok()).toBeTruthy();
 });
 
 test.afterAll(async ({ request }) => {
     // DELETE THE REPO
     const response = await request.delete(`/repos/${USER}/${REPO}`);
-    expect(response.ok()).toBeTruthy();
+    await expect(response.ok()).toBeTruthy();
 })
 
 test('Create a bug report', async ({ request }) => {
