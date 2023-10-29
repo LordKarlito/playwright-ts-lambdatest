@@ -6,8 +6,7 @@ on:
     branches: [ main, master ]
 
 env:
-  APIKEY: ${{ vars.APIKEY }}
-  GITSECRET: ${{ secrets.GITSECRET }}
+  APIKEY: ${{ secrets.APIKEY }}
   EMAIL: ${{ secrets.EMAIL }}
   PASS: ${{ secrets.PASS }}
 
