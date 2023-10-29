@@ -90,7 +90,6 @@ export default defineConfig({
     },
     {
       name: 'gitHubAPI',
-      workers: 1,
       testDir: './tests/api',
       testMatch: ['githubAPI.spec.ts'],
       use: {
