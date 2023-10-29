@@ -41,9 +41,6 @@ export default defineConfig({
       testDir: './tests/ui/specs',
       use: { 
       baseURL: 'https://www.lambdatest.com/selenium-playground',
-        // launchOptions: {
-        //   slowMo: 300,
-        // },
         ...devices['Desktop Chrome'] 
       },
     },
