@@ -14,14 +14,12 @@ const USER = 'LordKarlito';
 test.describe.configure({mode: 'serial'})
 
 test.beforeAll(async ({ request, baseURL }) => {
-    // console.log(`${process.env.GITSECRET} ${process.env.EMAIL} ${process.env.PASS}`)
     // CREATE A NEW REPO
     const response = await request.post(`${baseURL}/user/repos`, {
         data: {
             name: REPO,
         }
     });
-    console.log(response.status());
     await expect(response.ok()).toBeTruthy();
 });
 
